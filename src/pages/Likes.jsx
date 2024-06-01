@@ -5,8 +5,6 @@ import { ScaleLoader } from "react-spinners";
 import React, { useEffect, useState, useRef } from "react";
 // MY FILE
 import styled from "@emotion/styled";
-import LikedImg from "../assets/LikesBigImg.svg";
-import user from "../assets/user.svg";
 import pauseMusic from "../assets/pauseMusic.svg";
 import DownLoad from "../assets/DownLoad.svg";
 import unionn from "../assets/likeImg.svg";
@@ -88,11 +86,6 @@ function Likes() {
   const handleMusicsCard = () => {
     navigate("/");
   };
-
-  const springProps = useSpring({
-    transform: isPlaying ? "scale(1.5)" : "scale(1)",
-    config: { duration: 300 },
-  });
 
   const handlePrevTrack = () => {
     if (dataLikesLocal.length > 0 && currentTrack) {
